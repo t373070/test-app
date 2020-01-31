@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/ruby:2.6.5-node-browsers
+      - image: circleci/ruby:2.6.5p114-node-browsers
         environment:
           RAILS_ENV: test
           MYSQL_HOST: 127.0.0.1
@@ -15,7 +15,7 @@ jobs:
           MYSQL_PASSWORD: ''
           MYSQL_PORT: 3306
           #　追記
-          BUNDLER_VERSION: 2.1.4
+          #          BUNDLER_VERSION: 2.1.4
       - image: circleci/mysql:8.0.19
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: true
