@@ -16,8 +16,9 @@ default: &default
   username: root
   password: t1p2p3y4
   socket: /tmp/mysql.sock
-
-development:
+# 追記
+  host: <%= ENV['MYSQL_HOST'] %>
+  development:
   <<: *default
   database: test-app_development
 
